@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, main, aside, footer {
+            border: 1px solid red;
+        }
+
+        header {
+            grid-area: hd;
+
+        }
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: as;
+        }
+
+        footer {
+            grid-area: ft;
+        }
+
+        .container1 {
+            display: grid;
+            width: 100%;
+            height: 700px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 1fr 150px;
+            grid-template-areas: 
+            "hd hd hd" 
+            "main main as"
+            "ft ft ft";
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+    <header>
+        <p>Шапка страницы</p>
+    </header>
+    <div>
+        <main>
+            <p>Основная часть</p>
+            <div>
+                <p>Ещё 1</p>
+                <p>Ещё 2</p>
+                <p>Ещё 3</p>
+            </div>
+        </main>
+        
+        <aside>
+            <p>Боковая область</p>
+        </aside>
+    </div>
+
+    <footer>
+        <div>
+        <p>Секция футера 1</p>
+        <p>Секция футера 2</p>
+        <p>Секция футера 3</p>
+        <p>Секция футера 4</p>
+        </div>
+    </footer>
+    </div>
+
+</body>
+</html>
